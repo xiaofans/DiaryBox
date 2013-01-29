@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainParentFrame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+
+	<android.support.v4.view.ViewPager
+	    android:id="@+id/nViewPager"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    />
+	 <AbsoluteLayout 
+	     android:id="@+id/absolutelayout" 
+	     android:layout_width="fill_parent" 
+	     android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:background="@drawable/repeat_bg" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  >
+  
+    
+    <RelativeLayout 
+        android:id="@+id/relativelayout" 
+        android:background="@drawable/divider_bg" 
+        android:paddingBottom="4.0dip" 
+        style="@style/top_bar">
+        <TextView 
+            android:textSize="14.0dip" 
+            android:id="@+id/title" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:text="@string/_my_favourite_diary_list" 
+            android:layout_alignParentLeft="true" 
+            android:layout_centerVertical="true" 
+            android:textColor="#ff4d4b48" 
+            />
+        <TextView 
+            android:textSize="14.0dip" 
+            android:id="@+id/title_book_count"
+             android:layout_width="wrap_content" 
+             android:layout_height="wrap_content" 
+             android:layout_toRightOf="@id/title" 
+             android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout
+         android:background="#ff8e8d89" 
+         android:layout_width="fill_parent" 
+         android:layout_height="1.0dip" 
+         android:layout_below="@id/relativelayout" />
+    <ListView
+         android:id="@+id/list_article" 
+         android:background="@android:color/transparent" 
+         android:layout_width="fill_parent" 
+         android:layout_height="fill_parent" 
+         android:layout_marginTop="34.0dip"
+         android:listSelector="@android:color/transparent" 
+         android:cacheColorHint="@android:color/transparent"
+         android:divider="#19000000"
+         android:dividerHeight="0.0dip" />
+    
+</RelativeLayout>

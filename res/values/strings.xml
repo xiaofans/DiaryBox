@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AD8StoryActivity!</string>
+    <string name="app_name">豆瓣好日记</string>
+	<string name="_welcome_words_">献给众屌丝...</string>
+	<string name="w_words">I think I took a wrong turn,somewhere along the way,I sealed my fate and all I know is you have gone away!</string>
+	<string name="someone">--------To my young,my dear zhou.</string>
+	<string name="errortips">矮油，亲，检测不到您的网络，请确认检查您的网络是否连接正常哟！</string>
+	<string name="about">关于</string>
+	<string name="random">随机文章</string>
+	<string name="download">下载到手机</string>
+	<string name="exit">退出</string>
+	<string name="Voice">Voice</string>
+	<string name="about_content">豆瓣好日记 不间断更新豆瓣首页推荐日记 送给自己以及喜欢阅读的朋友们 若果对应用有什么意见或者建议请联系我!</string>
+	<string name="about_version">Diary Box v1.0</string>
+	<string name="about_copyright">&#169;2012 by xiaofan sunflower</string>
+	<string name="about_author_ww">  ttbzyzy@163.com \n QQ：493681057 \n sina @小饭的小梦想</string>
+	<string name="text_salon">保存日记</string>
+	<string name="_my_favourite_diary_list">我喜欢的日记列表</string>
+	<string name="about_url">""</string>
+</resources>
