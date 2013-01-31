@@ -22,6 +22,11 @@
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.BATTERY_STATS" />
+    
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	
     <application
         android:icon="@drawable/da_new2"
@@ -41,8 +46,32 @@
         </activity>
         <activity android:name="xiaofan.diarybox.About" android:theme="@android:style/Theme.Dialog"></activity>
         <activity  android:name="xiaofan.diarybox.AD8StoryActivity" android:screenOrientation="portrait"></activity>
-         <activity  android:name="xiaofan.diarybox.ArticleListActivity" android:screenOrientation="portrait"></activity>
+        <activity  android:name="xiaofan.diarybox.ArticleListActivity" android:screenOrientation="portrait"></activity>
         
+        <!-- this is for push -->
+        <service android:name="com.parse.PushService" />
+		  <receiver android:name="com.parse.ParseBroadcastReceiver">
+			  <intent-filter>
+			    <action android:name="android.intent.action.BOOT_COMPLETED" />
+			    <action android:name="android.intent.action.USER_PRESENT" />
+			  </intent-filter>
+		</receiver>
+		
+		  <receiver android:name="xiaofan.diarybox.push.AutoStartReceiver">
+			  <intent-filter>
+			    <action android:name="android.intent.action.BOOT_COMPLETED" />
+			    <action android:name="android.intent.action.USER_PRESENT" />
+			  </intent-filter>
+		</receiver>
+		
+		<receiver 
+		    android:name="xiaofan.diarybox.push.ParsePushReceiver"
+		    android:exported="false"
+		    >
+		    <intent-filter >
+		        <action android:name="com.testparsesdk.UPDATE_STATUS"/>
+		    </intent-filter>
+		</receiver>
         </application>
 
 </manifest>

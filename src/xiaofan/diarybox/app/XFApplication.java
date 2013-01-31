@@ -12,6 +12,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
+import com.parse.Parse;
+import com.parse.PushService;
+
+import xiaofan.diarybox.AD8StoryActivity;
 import xiaofan.diarybox.bean.BookBean;
 import xiaofan.diarybox.model.DaDB;
 import xiaofan.diarybox.model.XLModel;
@@ -67,6 +71,15 @@ public class XFApplication extends Application{
 		super.onCreate();
 		instance = this;
 		init();
+		
+		initPush();
+	}
+
+	private void initPush() {
+		
+		System.out.println("--> start init push");
+		Parse.initialize(getApplicationContext(), "yW5e739owjkcHfDaOC7NJBgJnTKWvKpj9GdNGiUY", "matrMMxHfUZmVWQXqL2zQ5M1IEcZkDaQ1yvBSCGK");
+        PushService.subscribe(getApplicationContext(), "box1", AD8StoryActivity.class);
 	}
 
 	private void init() {
